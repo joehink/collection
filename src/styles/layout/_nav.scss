@@ -1,0 +1,49 @@
+#nav {
+    padding: 1.25rem;
+    background: #3FAA6C;
+    .brand {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    .navLink {
+        font-size: .875rem;
+    }
+    .navItem {
+        text-decoration: none;
+        color: white;
+        margin-right: 1rem;
+        display: inline-block;
+    }
+    .navItem:last-child {
+        margin-right: 0;
+    }
+}
+
+@media(min-width: $md) {
+    #nav {
+        .brand {
+            font-size: 1.5rem;
+        }
+        .navLink {
+            font-size: 1rem;
+        }
+        .navItem {
+            margin-right: 1.25rem;
+        }
+    }
+}
+
+@media(min-width: $lg) {
+    #nav {
+        padding: 3.5rem;
+        .brand {
+            font-size: 2rem;
+        }
+        .navLink {
+            font-size: 1.125rem;
+        }
+        .navItem {
+            margin-right: 1.5rem;
+        }
+    }
+}

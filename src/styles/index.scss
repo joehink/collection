@@ -1,0 +1,19 @@
+// import structure based on: https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4
+
+// Utilities
+@import 'utilities/variables';
+
+// Vendors *None yet
+
+// Base
+@import 'base/typography';
+
+// Layout
+@import 'layout/footer';
+@import 'layout/nav';
+
+// Components *None yet
+
+// Pages *None yet
+
+// Themes *None yet
