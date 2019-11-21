@@ -37,7 +37,7 @@ module.exports = {
             families: ['Work Sans:400,700', 'Droid Serif']
           }
         }
-    }
+    },
     `gatsby-plugin-sass`,
   ],
 }
