@@ -9,11 +9,14 @@
 @import 'base/typography';
 
 // Layout
+@import 'layout/header';
 @import 'layout/footer';
 @import 'layout/nav';
 
-// Components *None yet
+// Components
+@import 'components/button';
 
-// Pages *None yet
+// Pages
+@import 'pages/index';
 
 // Themes *None yet

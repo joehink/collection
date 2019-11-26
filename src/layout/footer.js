@@ -13,7 +13,7 @@ export default () => (
         </div>
         <div className="signature">
             <span className="footerItem">&copy; Joe Hinkley 2019</span>
-            <a href="https://www.joehinkley.com" className="footerItem" target="_blank">www.joehinkley.com</a>
+            <a href="https://www.joehinkley.com" className="footerItem" target="_blank" rel="noopener noreferrer">www.joehinkley.com</a>
         </div>
     </footer>
 );
