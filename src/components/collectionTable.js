@@ -10,46 +10,56 @@ class CollectionTable extends Component {
 
         this.filterTable = this.filter = this.filterTable.bind(this);
 
-        this.data =  [
-            {
-                name: 'Tanner Linsley',
-                age: 26,
-                friend: {
-                    name: 'Jason Maurer',
-                    age: 23,
-                }
-            }
-        ];
-
         this.columns = [
             {
-                Header: 'Name',
-                accessor: 'name' // String-based value accessors!
+                Header: 'Last Name',
+                accessor: 'last_name' // String-based value accessors!
             }, 
             {
-                Header: 'Age',
-                accessor: 'age',
-                Cell: props => <span className='number'>{props.value}</span> // Custom cell components!
+                Header: 'First Name',
+                accessor: 'first_name'
             }, 
             {
-                id: 'friendName', // Required because our accessor is not a string
-                Header: 'Friend Name',
-                accessor: d => d.friend.name // Custom value accessors!
+                Header: 'Year',
+                accessor: 'year'
             },
             {
-                Header: props => <span>Friend Age</span>, // Custom header components!
-                accessor: 'friend.age'
+                Header: 'Manufacturer', // Custom header components!
+                accessor: 'manufacturer'
+            },
+            {
+                Header: 'Card #', // Custom header components!
+                accessor: 'card_number'
+            },
+            {
+                Header: 'Rookie', // Custom header components!
+                accessor: 'rookie'
+            },
+            {
+                Header: 'Date Purchased', // Custom header components!
+                accessor: 'date_purchased'
+            },
+            {
+                Header: 'Sport', // Custom header components!
+                accessor: 'sport'
+            },
+            {
+                Header: 'Position', // Custom header components!
+                accessor: 'position_abbreviation'
+            },
+            {
+                Header: 'Team', // Custom header components!
+                accessor: 'team_mascot'
             }
         ];
 
         this.state = {
-            filteredData: this.data,
-            
+            filteredData: props.data,
         }
     }
     filterTable(event) {
-        const filteredData = this.data.filter(row => {
-            return Object.values(row).some(value => String(value).toLowerCase().includes(event.target.value.toLowerCase()));
+        const filteredData = this.props.data.filter(card => {
+            return Object.values(card).some(value => String(value).toLowerCase().includes(event.target.value.toLowerCase()));
         });
 
         this.setState({
@@ -58,8 +68,9 @@ class CollectionTable extends Component {
     }
     render() {
         return (
-            <div>
-                <input type="text" onInput={this.filterTable} /> 
+            <div id="collectionTable">
+                <h2>Collection</h2>
+                <input type="text" className="search" placeholder="Search for a card..." onInput={this.filterTable} /> 
                 <ReactTable
                     data={this.state.filteredData}
                     columns={this.columns}

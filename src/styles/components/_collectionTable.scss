@@ -1,0 +1,108 @@
+#collectionTable {
+    padding: 2rem;
+    transform: translateY(-3rem);
+    background: $white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.25);
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: normal;
+        margin: 0 0 1rem;
+    }
+    .search {
+        display: inline-block;
+        padding: .75rem 1rem;
+        border: 1px solid $light-gray;
+        outline: none;
+        margin: 0 0 1.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .ReactTable {
+        border: none;
+        .rt-thead.-header {
+            box-shadow: none;
+            border-bottom: 1px solid $light-gray;
+        }
+        .rt-thead .rt-th {
+            font-weight: bold;
+            padding: 1rem 1rem 1rem 0;
+            border-right: none;
+        }
+        .rt-tbody .rt-tr-group {
+            border-bottom: 1px solid $light-gray;
+        }
+        .rt-tbody .rt-td {
+            padding: 1rem 1rem 1rem 0;
+            border-right: none;
+            font-size: .875rem;
+        }
+        .-pagination {
+            padding: 3rem 0 0 0;
+            box-shadow: none;
+            border-top: none;
+        }
+        .-pagination .-btn {
+            border-radius: 0;
+            font-weight: bold;
+            padding: .75rem 1.5rem;
+        }
+        .-pagination .-previous {
+            order: 1;
+            margin: 0 .5rem 1rem;
+        }
+        .-pagination .-next {
+            order: 2;
+            margin: 0 0 1rem;
+        }
+        .-pagination .-center {
+            order: 3;
+        }
+    }
+}
+
+@media(min-width: $md) {
+    #collectionTable {
+        padding: 3rem;
+        transform: translateY(-1rem);
+        h2 {
+            font-size: 2rem;
+        }
+        .ReactTable {
+            .-pagination .-previous {
+                order: 1;
+                margin: 0;
+            }
+            .-pagination .-center {
+                order: 2;
+            }
+            .-pagination .-next {
+                order: 3;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media(min-width: $lg) {
+    #collectionTable {
+        transform: translateY(-6rem);
+        h2 {
+            font-size: 2.5rem;
+        }
+        .search {
+            margin: 0 0 3rem;
+        }
+        .ReactTable {
+            .rt-thead .rt-th {
+                font-size: 1.125rem;
+            }
+            .rt-tbody .rt-td {
+                font-size: 1rem;
+            }
+            .-pagination .-btn {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby';
 
 import background from "../../public/static/images/bg-1.jpg"
 import Button from "../components/button";
@@ -9,7 +10,7 @@ import Header from "../layout/header";
 import Nav from "../layout/nav";
 import SEO from "../components/seo";
 
-const IndexPage = () => (
+export default ({ data }) => (
     <div id="index">
         <SEO title="Home" />
         <Header image={background}>
@@ -18,9 +19,28 @@ const IndexPage = () => (
             <ButtonLink to="/history" color="white">What happened last week?</ButtonLink>
             <Button color="white" border={true}>View a random card</Button>
         </Header>
-        <CollectionTable />
+        <CollectionTable data={data.allCollectionCsv.nodes}/>
         <Footer />
     </div>
 );
 
-export default IndexPage
+export const query = graphql`
+query CollectionQuery {
+    allCollectionCsv {
+        nodes {
+            year
+            team_mascot
+            team_location
+            sport
+            rookie
+            position_abbreviation
+            manufacturer
+            last_name
+            id
+            first_name
+            date_purchased
+            card_number
+        }
+    }
+}
+`

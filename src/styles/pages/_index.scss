@@ -1,4 +1,5 @@
 #index {
+    background: #ECEBE9;
     #header {
         h1 {
             margin-bottom: 2rem;
@@ -12,6 +13,9 @@
         .button:last-child {
             margin-bottom: 0;
         }
+    }
+    #collectionTable {
+        margin-bottom: 6rem;
     }
 }
 
