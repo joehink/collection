@@ -3,7 +3,7 @@
     background-size: cover;
     .headerContent {
         background: rgba($primary, 0.9);
-        padding: 1.25rem 1.25rem 7.5rem;
+        padding: 1.25rem 0 7.5rem;
     }
     h1 {
         margin: 0;
@@ -18,7 +18,7 @@
 @media(min-width: $lg) {
     #header {
         .headerContent {
-            padding: 3.5rem 3.5rem 15rem;
+            padding: 3.5rem 0 15rem;
         }
         h1 {
             font-size: 6.5rem;

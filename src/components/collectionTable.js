@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import moment from "moment";
 
 import ReactTable from 'react-table';
 import 'react-table/react-table.css';
@@ -21,34 +22,38 @@ class CollectionTable extends Component {
             }, 
             {
                 Header: 'Year',
-                accessor: 'year'
+                id: 'year',
+                accessor: card => Number(card.year),
             },
             {
-                Header: 'Manufacturer', // Custom header components!
+                Header: 'Manufacturer',
                 accessor: 'manufacturer'
             },
             {
-                Header: 'Card #', // Custom header components!
-                accessor: 'card_number'
+                Header: 'Card #',
+                id: 'cardNumber',
+                accessor: card => Number(card.card_number),
             },
             {
-                Header: 'Rookie', // Custom header components!
-                accessor: 'rookie'
+                Header: 'Rookie',
+                id: 'rookie',
+                accessor: card => card.rookie === 'TRUE' ? 'Yes' : 'No'
             },
             {
-                Header: 'Date Purchased', // Custom header components!
-                accessor: 'date_purchased'
+                Header: 'Date Added',
+                id: 'date_added',
+                accessor: card => moment(card.date_added).format("MMM D, YYYY")
             },
             {
-                Header: 'Sport', // Custom header components!
+                Header: 'Sport',
                 accessor: 'sport'
             },
             {
-                Header: 'Position', // Custom header components!
+                Header: 'Position',
                 accessor: 'position_abbreviation'
             },
             {
-                Header: 'Team', // Custom header components!
+                Header: 'Team',
                 accessor: 'team_mascot'
             }
         ];

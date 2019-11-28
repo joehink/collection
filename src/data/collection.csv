@@ -1,4 +1,4 @@
-id,last_name,first_name,year,manufacturer,card_number,career_length,rookie,date_purchased,sport,position,position_abbreviation,team_location,team_mascot
+id,last_name,first_name,year,manufacturer,card_number,career_length,rookie,date_added,sport,position,position_abbreviation,team_location,team_mascot
 1,Anderson,Tim,2019,Topps,80,3,FALSE,"November 25, 2019",Baseball,Short Stop,SS,Chicago,White Sox
 2,Turner,Trea,2019,Topps,176,4,FALSE,"November 25, 2019",Baseball,Short Stop,SS,Washington,Nationals
 3,Jones,Adam,2019,Topps,8,13,FALSE,"November 25, 2019",Baseball,Outfielder,OF,Baltimore,Orioles
