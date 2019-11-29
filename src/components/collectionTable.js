@@ -14,7 +14,7 @@ class CollectionTable extends Component {
         this.columns = [
             {
                 Header: 'Last Name',
-                accessor: 'last_name' // String-based value accessors!
+                accessor: 'last_name'
             }, 
             {
                 Header: 'First Name',
@@ -36,17 +36,21 @@ class CollectionTable extends Component {
             },
             {
                 Header: 'Rookie',
-                id: 'rookie',
-                accessor: card => card.rookie === 'TRUE' ? 'Yes' : 'No'
+                accessor: 'rookie',
             },
             {
                 Header: 'Date Added',
                 id: 'date_added',
-                accessor: card => moment(card.date_added).format("MMM D, YYYY")
+                accessor: card => moment(new Date(card.date_added)).format("MMM D, YYYY")
             },
             {
                 Header: 'Sport',
                 accessor: 'sport'
+            },
+            {
+                Header: 'Position',
+                accessor: 'position',
+                show: false
             },
             {
                 Header: 'Position',
@@ -63,8 +67,11 @@ class CollectionTable extends Component {
         }
     }
     filterTable(event) {
+        const searchTerms = event.target.value.toLowerCase().split(' ');
+    
         const filteredData = this.props.data.filter(card => {
-            return Object.values(card).some(value => String(value).toLowerCase().includes(event.target.value.toLowerCase()));
+            const cardPropertiesStr = Object.values(card).join(' ').toLowerCase();
+            return searchTerms.every(term => cardPropertiesStr.includes(term));
         });
 
         this.setState({

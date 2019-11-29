@@ -56,6 +56,7 @@ query CollectionQuery {
             team_location
             sport
             rookie
+            position
             position_abbreviation
             manufacturer
             last_name
