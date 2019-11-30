@@ -15,7 +15,9 @@
         }
     }
     #collectionTable {
-        margin-bottom: 6rem;
+        margin-bottom: 9rem;
+        position: relative;
+        margin-top: -3rem;
     }
 }
 
@@ -38,6 +40,9 @@
                 margin: 0;
             }
         }
+        #collectionTable {
+            margin-top: -1rem;
+        }
     }
 }
 
@@ -48,6 +53,9 @@
             h1 {
                 margin-top: 2rem;
             }
+        }
+        #collectionTable {
+            margin-top: -6rem;
         }
     }
 }

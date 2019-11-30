@@ -1,13 +1,13 @@
-id,last_name,first_name,full_name,year,manufacturer,card_number,career_length,rookie,date_added,sport,position,position_abbreviation,team_location,team_mascot
-1,Anderson,Tim,Tim Anderson,2019,Topps,80,3,No,11/25/2019,Baseball,Short Stop,SS,Chicago,White Sox
-2,Turner,Trea,Trea Turner,2019,Topps,176,4,No,11/25/2019,Baseball,Short Stop,SS,Washington,Nationals
-3,Jones,Adam,Adam Jones,2019,Topps,8,13,No,11/25/2019,Baseball,Outfielder,OF,Baltimore,Orioles
-4,Lowe,Brandon,Brandon Lowe,2019,Topps,114,0,Yes,11/25/2019,Baseball,Short Stop,SS,Tampa Bay,Rays
-5,Harrison,Josh,Josh Harrison,2019,Topps,339,8,No,11/25/2019,Baseball,Second Base,2B,Pittsburgh,Pirates
-6,Minor,Mike,Mike Minor,2019,Topps,278,7,No,11/25/2019,Baseball,Pitcher,P,Texas,Rangers
-7,Scherzer,Max,Max Scherzer,2019,Topps,344,11,No,11/25/2019,Baseball,Pitcher,P,Washington,Nationals
-8,Smith,Will,Will Smith,2019,Topps,203,6,No,11/25/2019,Baseball,Pitcher,P,San Francisco,Giants
-9,Segura,Jean,Jean Segura,2019,Topps,21,7,No,11/25/2019,Baseball,Short Stop,SS,Seattle,Mariners
-10,Blackburn,Paul,Paul Blackburn,2019,Topps,36,2,No,11/25/2019,Baseball,Pitcher,P,Oakland,Athletics
-11,Dominguez,Seranthony,Seranthony Dominguez,2019,Topps,127,1,No,11/25/2019,Baseball,Pitcher,P,Philadelphia,Phillies
-12,Marte,Starling,Starling Marte,2019,Topps,253,7,No,11/25/2019,Baseball,Outfielder,OF,Pittsburgh,Pirates
+id,last_name,first_name,full_name,year,manufacturer,card_number,career_length,rookie,date_added,sport,position,position_abbreviation,team_location,team_mascot,front_img,back_img
+1,Anderson,Tim,Tim Anderson,2019,Topps,80,3,No,11/25/2019,Baseball,Short Stop,SS,Chicago,White Sox,images/cards/1a.jpg,images/cards/1b.jpg
+2,Turner,Trea,Trea Turner,2019,Topps,176,4,No,11/25/2019,Baseball,Short Stop,SS,Washington,Nationals,images/cards/2a.jpg,images/cards/2b.jpg
+3,Jones,Adam,Adam Jones,2019,Topps,8,13,No,11/25/2019,Baseball,Outfielder,OF,Baltimore,Orioles,images/cards/3a.jpg,images/cards/3b.jpg
+4,Lowe,Brandon,Brandon Lowe,2019,Topps,114,0,Yes,11/25/2019,Baseball,Short Stop,SS,Tampa Bay,Rays,images/cards/4a.jpg,images/cards/4b.jpg
+5,Harrison,Josh,Josh Harrison,2019,Topps,339,8,No,11/25/2019,Baseball,Second Base,2B,Pittsburgh,Pirates,images/cards/5a.jpg,images/cards/5b.jpg
+6,Minor,Mike,Mike Minor,2019,Topps,278,7,No,11/25/2019,Baseball,Pitcher,P,Texas,Rangers,images/cards/6a.jpg,images/cards/6b.jpg
+7,Scherzer,Max,Max Scherzer,2019,Topps,344,11,No,11/25/2019,Baseball,Pitcher,P,Washington,Nationals,images/cards/7a.jpg,images/cards/7b.jpg
+8,Smith,Will,Will Smith,2019,Topps,203,6,No,11/25/2019,Baseball,Pitcher,P,San Francisco,Giants,images/cards/8a.jpg,images/cards/8b.jpg
+9,Segura,Jean,Jean Segura,2019,Topps,21,7,No,11/25/2019,Baseball,Short Stop,SS,Seattle,Mariners,images/cards/9a.jpg,images/cards/9b.jpg
+10,Blackburn,Paul,Paul Blackburn,2019,Topps,36,2,No,11/25/2019,Baseball,Pitcher,P,Oakland,Athletics,images/cards/10a.jpg,images/cards/10b.jpg
+11,Dominguez,Seranthony,Seranthony Dominguez,2019,Topps,127,1,No,11/25/2019,Baseball,Pitcher,P,Philadelphia,Phillies,images/cards/11a.jpg,images/cards/11b.jpg
+12,Marte,Starling,Starling Marte,2019,Topps,253,7,No,11/25/2019,Baseball,Outfielder,OF,Pittsburgh,Pirates,images/cards/12a.jpg,images/cards/12b.jpg

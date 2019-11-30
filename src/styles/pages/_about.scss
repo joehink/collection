@@ -1,0 +1,133 @@
+#about {
+    background: #ECEBE9;
+    #header {
+        .headerContent {
+            height: 20rem;
+        }
+    }
+    .aboutContent {
+        background: white;
+        padding: 1rem;
+        box-sizing: border-box;
+        position: relative;
+        margin-top: -22.5rem;
+        margin-bottom: 9rem;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        h1 {
+            color: $black;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 1rem;
+            margin: .75rem 0 1.5rem;
+            line-height: 1.5;
+        }
+    }
+    .paragraph {
+        font-size: .875rem;
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+    }
+    .banner {
+        margin: 0 0 1.5rem 0;
+        figcaption {
+            font-size: .75rem;
+            margin-top: .75rem;
+        }
+    }
+    figcaption {
+        font-size: .75rem;
+        color: #888;
+        line-height: 1.5;
+        margin: 0 0 1.5rem 0;
+    }
+    img {
+        width: 100%;
+    }
+    .left {
+        float: left;
+        margin: 0 1.5rem 0 0;
+        width: 100%;
+    }
+    .right {
+        float: right;
+        margin: 0 0 0 1.5rem;
+        width: 100%;
+    }
+}
+
+@media(min-width: $md) {
+    #about {
+        #header {
+            .headerContent {
+                height: 25rem;
+            }
+        }
+        .aboutContent {
+            position: relative;
+            margin-top: -25rem;
+            padding: 2rem;
+            h1 {
+                font-size: 3.5rem;
+            }
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+        .paragraph {
+            font-size: 1rem;
+        }
+        .banner {
+            figcaption {
+                font-size: 1rem;
+                margin: .5rem 0 0;
+            }
+        }
+        figcaption {
+            margin: 0 0 .5rem;
+        }
+        .left {
+            width: 200px;
+        }
+        .right {
+            width: 200px;
+        }
+    }
+}
+
+@media(min-width: $lg) {
+    #about {
+        #header {
+            .headerContent {
+                height: 35rem;
+            }
+        }
+        .aboutContent {
+            position: relative;
+            margin-top: -40rem;
+            padding: 4rem;
+            h1 {
+                font-size: 6.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        .paragraph {
+            font-size: 1.125rem;
+        }
+        .banner {
+            figcaption {
+                font-size: 1rem;
+            }
+        }
+        .left {
+            width: 200px;
+        }
+        .right {
+            width: 200px;
+        }
+    }
+}

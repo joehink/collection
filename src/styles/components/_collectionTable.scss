@@ -1,6 +1,5 @@
 #collectionTable {
     padding: 2rem;
-    transform: translateY(-3rem);
     background: $white;
     box-shadow: 0 0 15px rgba(0,0,0,0.25);
     h2 {
@@ -64,7 +63,6 @@
 @media(min-width: $md) {
     #collectionTable {
         padding: 3rem;
-        transform: translateY(-1rem);
         h2 {
             font-size: 2rem;
         }
@@ -86,9 +84,9 @@
 
 @media(min-width: $lg) {
     #collectionTable {
-        transform: translateY(-6rem);
         h2 {
             font-size: 2.5rem;
+            margin-bottom: 1.5rem;
         }
         .search {
             margin: 0 0 3rem;

@@ -57,6 +57,11 @@ class CollectionTable extends Component {
                 accessor: 'position_abbreviation'
             },
             {
+                Header: 'Location',
+                accessor: 'team_location',
+                show: false
+            },
+            {
                 Header: 'Team',
                 accessor: 'team_mascot'
             }
