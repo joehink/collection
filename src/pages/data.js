@@ -23,38 +23,49 @@ export default ({ data }) => (
             </div>
         </Header>
         <div className="charts container-lg">
-            <div className="chart">
-                <ResponsiveContainer>
-                    <BarChart data={data.cardsPerDay.group}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="fieldValue" />
-                        <YAxis />
-                        <Tooltip />
-                        <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
-                    </BarChart>
-                </ResponsiveContainer>
+            <div className="chart-container">
+                <h4>Cards added per day</h4>
+                <div className="chart">
+                    <ResponsiveContainer>
+                        <BarChart data={data.cardsPerDay.group}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="fieldValue" />
+                            <YAxis />
+                            <Tooltip />
+                            <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
-            <div className="chart">
-                <ResponsiveContainer>
-                    <BarChart data={data.cardsPerTeam.group.sort((a, b) => b.totalCount - a.totalCount).slice(0,10)}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="fieldValue" />
-                        <YAxis />
-                        <Tooltip />
-                        <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
-                    </BarChart>
-                </ResponsiveContainer>
+            
+            <div className="chart-container">
+                <h4>Cards per team</h4>
+                <div className="chart">
+                    <ResponsiveContainer>
+                        <BarChart data={data.cardsPerTeam.group.sort((a, b) => b.totalCount - a.totalCount).slice(0,10)}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="fieldValue" />
+                            <YAxis />
+                            <Tooltip />
+                            <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
-            <div className="chart">
-                <ResponsiveContainer>
-                    <BarChart data={data.cardsPerPlayer.group.sort((a, b) => b.totalCount - a.totalCount).slice(0,10)}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="fieldValue" />
-                        <YAxis />
-                        <Tooltip />
-                        <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
-                    </BarChart>
-                </ResponsiveContainer>
+            
+            <div className="chart-container">
+                <h4>Cards per player</h4>
+                <div className="chart">
+                    <ResponsiveContainer>
+                        <BarChart data={data.cardsPerPlayer.group.sort((a, b) => b.totalCount - a.totalCount).slice(0,10)}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="fieldValue" />
+                            <YAxis />
+                            <Tooltip />
+                            <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
         </div>
         <Footer />

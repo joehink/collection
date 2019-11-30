@@ -24,18 +24,25 @@
         }
     }
     .charts {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
         grid-gap: 3rem;
         position: relative;
-        margin-top: -6rem;
+        margin-top: -3rem;
         margin-bottom: 9rem;
     }
-    .chart {
-        height: 350px;
+    .chart-container {
         background: $white;
         box-shadow: 0 0 15px rgba(0,0,0,0.3);
         padding: 2rem 2rem 2rem 0;
+        margin-bottom: 2rem;
+        h4 {
+            margin: 0 0 1rem;
+            font-size: 1rem;
+            text-align: center;
+            font-weight: normal;
+        }
+    }
+    .chart {
+        height: 200px;
     }
 }
 
@@ -50,6 +57,12 @@
                 margin: 0;
             }
         }
+        .chart-container {
+            h4 {
+                margin: 0 0 1.5rem 2rem;
+                font-size: 1.5rem;
+            }
+        }
     }
 }
 
@@ -62,6 +75,17 @@
             h1 {
                 font-size: 4rem;
             }
+        }
+        .charts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+            margin-top: -6rem;
+        }
+        .chart-container {
+            margin-bottom: 0;
+        }
+        .chart {
+            height: 300px;
         }
     }
 }
