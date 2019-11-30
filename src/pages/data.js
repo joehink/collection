@@ -2,6 +2,7 @@ import React from "react";
 
 import background from "../../public/static/images/bg-3.jpg";
 
+import { BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Bar, ResponsiveContainer } from "recharts";
 import Button from "../components/button";
 import ButtonLink from "../components/buttonLink";
 import Footer from "../layout/footer";
@@ -15,34 +16,73 @@ export default ({ data }) => (
         <Header image={background}>
             <div className="container-lg">
                 <Nav />
-                <h3>{data.allCollectionCsv.nodes.length}</h3>
+                <h3>{data.collectionCount.totalCount}</h3>
                 <h1>Cards in the collection</h1>
                 <Button color="white">More collection data</Button>
                 <ButtonLink color="white" border={true} to="/about">About the collection</ButtonLink>
             </div>
         </Header>
+        <div className="charts container-lg">
+            <div className="chart">
+                <ResponsiveContainer>
+                    <BarChart data={data.cardsPerDay.group}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="fieldValue" />
+                        <YAxis />
+                        <Tooltip />
+                        <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+            <div className="chart">
+                <ResponsiveContainer>
+                    <BarChart data={data.cardsPerTeam.group.sort((a, b) => b.totalCount - a.totalCount).slice(0,10)}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="fieldValue" />
+                        <YAxis />
+                        <Tooltip />
+                        <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+            <div className="chart">
+                <ResponsiveContainer>
+                    <BarChart data={data.cardsPerPlayer.group.sort((a, b) => b.totalCount - a.totalCount).slice(0,10)}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="fieldValue" />
+                        <YAxis />
+                        <Tooltip />
+                        <Bar dataKey="totalCount" name="Cards" fill="#3FAA6C" />
+                    </BarChart>
+                </ResponsiveContainer>
+            </div>
+        </div>
         <Footer />
     </div>
 );
 
 export const query = graphql`
-    query CollectionDataQuery {
-        allCollectionCsv {
-            nodes {
-                year
-                team_mascot
-                team_location
-                sport
-                rookie
-                position
-                position_abbreviation
-                manufacturer
-                last_name
-                id
-                first_name
-                date_added
-                card_number
+    query {
+        cardsPerDay: allCollectionCsv(sort: {fields: date_added, order: ASC}) {
+            group(field: date_added) {
+                totalCount
+                fieldValue
             }
+        }
+        cardsPerTeam: allCollectionCsv(sort: {fields: team_mascot, order: ASC}) {
+            group(field: team_mascot) {
+                totalCount
+                fieldValue
+            }
+        }
+        cardsPerPlayer: allCollectionCsv(sort: {fields: full_name, order: ASC}) {
+            group(field: full_name) {
+                totalCount
+                fieldValue
+            }
+        }
+        collectionCount: allCollectionCsv {
+            totalCount
         }
     }
 `
