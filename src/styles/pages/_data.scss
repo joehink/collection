@@ -1,0 +1,52 @@
+#data {
+    #nav {
+        text-align: left;
+    }
+    #header {
+        text-align: center;
+        h3 {
+            font-size: 6rem;
+            margin: 2rem 0 0;
+            color: $white;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            margin: 1rem 0 2.5rem;
+        }
+        .button {
+            margin: 0 0 1rem;
+            width: 100%;
+        }
+        .button:last-child {
+            margin: 0;
+        }
+    }
+}
+
+@media(min-width: $md) {
+    #data {
+        #header {
+            .button {
+                margin: 0 1rem 0 0;
+                width: unset;
+            }
+            .button:last-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media(min-width: $lg) {
+    #data {
+        #header {
+            h3 {
+                font-size: 7rem;
+            }
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+}
