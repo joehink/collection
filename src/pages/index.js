@@ -1,7 +1,9 @@
 import React, { Component } from "react"
 import { graphql } from 'gatsby';
 
-import background from "../../public/static/images/bg-1.jpg"
+import background from "../../public/static/images/video-poster.png";
+import backgroundVid from "../../public/static/videos/video-bg.mp4";
+import poster from "../../public/static/images/bg-1.jpg";
 import Button from "../components/button";
 import ButtonLink from "../components/buttonLink";
 import CollectionTable from "../components/collectionTable";
@@ -28,7 +30,7 @@ class IndexPage extends Component {
         return (
             <div id="index">
                 <SEO title="Home" />
-                <Header image={background}>
+                <Header video={backgroundVid} image={background} poster={poster}>
                     <div className="container-lg">
                         <Nav />
                         <h1>Cards.<br />Lots of cards.</h1>
