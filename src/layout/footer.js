@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import moment from "moment";
 
 export default () => (
     <footer id="footer">
@@ -12,7 +13,7 @@ export default () => (
             </nav>
         </div>
         <div className="signature">
-            <span className="footerItem">&copy; Joe Hinkley 2019</span>
+            <span className="footerItem">&copy; Joe Hinkley {moment().year()}</span>
             <a href="https://www.joehinkley.com" className="footerItem" target="_blank" rel="noopener noreferrer">www.joehinkley.com</a>
         </div>
     </footer>
