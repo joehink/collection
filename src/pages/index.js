@@ -6,6 +6,7 @@ import backgroundVid from "../../public/static/videos/video-bg.mp4";
 import poster from "../../public/static/images/bg-1.jpg";
 import Button from "../components/button";
 import ButtonLink from "../components/buttonLink";
+import CardPopup from "../components/cardPopup";
 import CollectionTable from "../components/collectionTable";
 import Footer from "../layout/footer";
 import Header from "../layout/header";
@@ -18,13 +19,25 @@ class IndexPage extends Component {
         super(props);
 
         this.getRandomCard = this.getRandomCard.bind(this);
+        this.hideRandomCard = this.hideRandomCard.bind(this);
+
+        this.state = {
+            randomCard: null
+        };
     }
     getRandomCard() {
         const collection = this.props.data.allCollectionCsv.nodes;
-
         const randomIndex = Math.floor(Math.random() * collection.length);
 
-        console.log(collection[randomIndex]);
+        this.setState({ randomCard: collection[randomIndex] })
+    }
+    hideRandomCard() {
+        this.setState({ randomCard: null });
+    }
+    renderRandomCard() {
+        if (this.state.randomCard) {
+            return <CardPopup card={this.state.randomCard} onClick={this.hideRandomCard} />
+        }
     }
     render() {
         return (
@@ -35,13 +48,14 @@ class IndexPage extends Component {
                         <Nav />
                         <h1>Cards.<br />Lots of cards.</h1>
                         <ButtonLink to="/history" color="white">What happened last week?</ButtonLink>
-                        <Button color="white" border={true} onClick={this.getRandomCard}>View a random card</Button>
+                        <Button color="white" border={true} onClick={this.getRandomCard}>Pick a random card</Button>
                     </div>
                 </Header>
                 <div className="container-lg">
                     <CollectionTable data={this.props.data.allCollectionCsv.nodes}/>
                 </div>
                 <Footer />
+                {this.renderRandomCard()}
             </div>
         )
     }
@@ -66,6 +80,13 @@ query CollectionQuery {
             first_name
             date_added
             card_number
+            front_img {
+                childImageSharp {
+                    fluid(maxWidth: 350) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
         }
     }
 }
